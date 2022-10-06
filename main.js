@@ -16,8 +16,9 @@ function new_image(get_image)
 		block_image_object=Img;
 block_image_object.scaleToWidth(block_image_width);
 block_image_object.scaleToHeight(block_image_height);
-block_image_object.set(top:block_y,left:block_x);
-});	
+block_image_object.set({top:block_y,left:block_x});	
+canvas.add(block_image_object);
+});
 }
 
 window.addEventListener("keydown", my_keydown);
@@ -61,7 +62,7 @@ console.log(keyPressed);
 	{	 
 	
 		block_x=880;
-		new_image('pink.jpg');
+		new_image('pink.png');
 		console.log('p')
 
 	}
@@ -73,10 +74,8 @@ console.log(keyPressed);
 	if(keyPressed == '66')
 	{
 		block_x=1040;
-		new_image('blue.jpg');
+		new_image('blue.png');
 		console.log('B')
 
 
-	}
-	
-
+	}}
